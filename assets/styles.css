@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  font-family: "Inter", serif;
+  /* overflow-x: hidden; */
+}
+
+.text-big {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.sidebar {
+    transform: translateX(0%);
+  }
+
+  .menu-items li a {
+    transition: all 0.3s;
+  }
+  
+   .menu-items li {
+    position: relative;
+  } 
+
+  .menu-items li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #25245e;
+    transition: all 0.3s;
+    opacity: 0;
+  }
+
+  .arrow.active {
+    opacity: 1;
+  }
+  
+
+  .menu-items li:hover::after {
+    opacity: 1;
+  }  
+
+  .menu-items li.active::after {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    #app.toggle {
+      grid-template-columns: 1fr;
+    }
+    .sidebar {
+      width: 100px;
+      position: absolute;
+      background: #fff;
+      z-index: 999;
+      transform: translateX(-200%);
+      transition: all 0.5s ease-out;
+    }
+  }
+  
