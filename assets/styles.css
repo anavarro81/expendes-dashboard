@@ -5,10 +5,24 @@ body {
   /* overflow-x: hidden; */
 }
 
+.header-content {
+  background-image: url(../assets/images/bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
 .text-big {
   font-size: 20px !important;
   font-weight: 600 !important;
 }
+
+.regular-text {
+  font-size: 15px;
+  font-weight: 400;
+}
+
 
 .sidebar {
     transform: translateX(0%);
