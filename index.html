@@ -3,6 +3,7 @@
 <!-- ======================== -->
 
 <!-- ======== SIDEBAR ======== -->
+<!--  TOTALES                 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,7 @@
     
     <link rel="stylesheet" href="./assets/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/tailwindconfig.js">
+    <script src="./assets/tailwindconfig.js"></script> 
 
 </head>
 
@@ -306,23 +307,22 @@
             <p class="text-big text-charcoalGray">1.250 €</p>
           </div>
         </div>
-
 <!-- END GASTO TOTAL -->
-              </div>
+        </div>
 
-            </div>
+        </div>
         </header>
 <!-- ====== END HEADER  ======== -->
 
 
 
-<!-- ======================== -->
-<!--  GASTO SEMANAL -->
-<!-- ======================== -->
+
 
         <div class="mt-10 p-5 sm:p-10 flex flex-col lg:flex-row justify-between item-start gap-5 lg:max-w-[1400px] mx-auto "
         > 
-
+<!-- ======================== -->
+<!--  GASTO SEMANAL -->
+<!-- ======================== -->
             <div class="flex flex-col justify-between lg:max-w-[500px] w-full ">
                 
                 <div class="flex justify-between items-center gap-3 w-full">
@@ -372,9 +372,176 @@
                     </div>
                     </div>
             </div>
+            <div class="mt-5 px-3">
+              <ul class="flex flex-col gap-3 lg:h-[360px] lg:overflow-y-auto overflow-x-hidden lg:pe-5 ">
+<!-- Semana 1-->
+<!-- separador linea -->                  
+                    <li
+                    class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+                    >
+   
+                    <div class="flex flex-col gap-1 w-[60%]">
+                      <!-- Mockup:  Mes + Nº de semana-->
+                      <p class="text-base text-softSteelBlue"> MAR S1 </p>
+                      <p class="regular-text text-silerGray" > 1-3 Marzo </p>
+                    </div>
+                    <!-- Mockup:  diferencia deprecio -->
+                      <p class="regular-text text-charcoalGray w-[20%] text-start up-rate"> 
+                        -2% 
+                      </p>
+                      <p class="regular-text text-charcoalGray w-[20%] text-end"> 
+                        210 € 
+                      </p>                   
+                  </li>
+                  
+                  <li
+                  class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+                >
+                  <div class="flex flex-col gap-1 w-[60%]">
+                    <p class="text-base text-softSteelBlue">MAR S2</p>
+                    <p class="regular-text text-silverGray">4-10 Marzo</p>
+                  </div>
+                  <p
+                    class="regular-text text-charcoalGray down-rate w-[20%] text-start"
+                  >
+                    +5%
+                  </p>
+                  <p class="regular-text text-charcoalGray w-[20%] text-end">
+                    $220.50
+                  </p>
+                </li>
+                <li
+                  class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+                >
+                  <div class="flex flex-col gap-1 w-[60%]">
+                    <p class="text-base text-softSteelBlue">MAR S3</p>
+                    <p class="regular-text text-silverGray">11-17 Marzo</p>
+                  </div>
+                  <p
+                    class="regular-text text-charcoalGray up-rate w-[20%] text-start"
+                  >
+                    -
+                  </p>
+                  <p class="regular-text text-charcoalGray w-[20%] text-end">
+                    $210
+                  </p>
+                </li>
+                <li
+                  class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+                >
+                  <div class="flex flex-col gap-1 w-[60%]">
+                    <p class="text-base text-softSteelBlue">MAR S4</p>
+                    <p class="regular-text text-silverGray">18-24 Marzo</p>
+                  </div>
+                  <p
+                    class="regular-text text-charcoalGray up-rate w-[20%] text-start"
+                  >
+                    -
+                  </p>
+                  <p class="regular-text text-charcoalGray w-[20%] text-end">
+                    0
+                  </p>
+                </li>
+                <li
+                  class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+                >
+                  <div class="flex flex-col gap-1 w-[60%]">
+                    <p class="text-base text-softSteelBlue">MAR S5</p>
+                    <p class="regular-text text-silverGray">25-31 Marzo</p>
+                  </div>
+                  <p
+                    class="regular-text text-charcoalGray up-rate w-[20%] text-start"
+                  >
+                    -
+                  </p>
+                  <p class="regular-text text-charcoalGray w-[20%] text-end">
+                    0
+                  </p>
+                </li>
+              </ul>    
+            </div> 
+            </div>
+<!-- ======================== -->
+<!--  END GASTO SEMANAL -->
+<!-- ======================== -->
+        
+<!-- ======================== -->
+<!--  TOP GASTOS -->
+<!-- ======================== -->
+
+            <div class="flex flex-col lg:max-w-[500px] w-full">
+<!-- Cabecera tabla con mes-->
+              <div class="w-full flex justify-between items-start ">
+                
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-big text-midnightBlue">Top Gastos</h3>
+                  <p class="reguar-text text-softSteelBlue"> PROMEDIO DIARIO $80.55 </p>                  
+                </div>                
+                <p class="regular-text text-silverGray"> MARZO </p>
+              </div>
+<!-- end Cabecera tabla con mes-->
+
+            <!-- Tabla de gastos -->
+            <div class="mt-5 p-5 bg-white border-2 border-[#E5ECF6] rounded-[15px] ">
+              <ul class="flex flex-col gap-3 lg:h-[210px] lg:overflow-y-auto overflow-x-hidden lg:pe-5">
+                <li
+                  class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+                >
+                  <div class="flex flex-col gap-1">
+                    <p class="text-base text-charcoalGray">Salud</p>
+                    <p class="regular-text text-softSteelBlue">
+                      11 de Marzo 2024
+                    </p>
+                  </div>
+                  <div class="flex gap-4">
+                    <p class="sub-text text-silverGray text-end">8%</p>
+                    <p class="text-base down-rate text-end">$210</p>
+                  </div>
+                </li>
+                <li
+                class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+              >
+                <div class="flex flex-col gap-1">
+                  <p class="text-base text-charcoalGray">Renta</p>
+                  <p class="regular-text text-softSteelBlue">
+                    3 de Marzo 2024
+                  </p>
+                </div>
+                <div class="flex gap-4">
+                  <p class="sub-text text-silverGray text-end">90%</p>
+                  <p class="text-base down-rate text-end">-$430</p>
+                </div>
+              </li>
+              <li
+              class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+            >
+              <div class="flex flex-col gap-1">
+                <p class="text-base text-charcoalGray">Nextory</p>
+                <p class="regular-text text-softSteelBlue">
+                  3 de Marzo 2024
+                </p>
+              </div>
+              <div class="flex gap-4">
+                <p class="sub-text text-silverGray text-end">2%</p>
+                <p class="text-base down-rate text-end">-$5.50</p>
+              </div>
+            </li>
+
+
+
+              </ul>
+
 
             </div>
-        </div>
+            </div>
+    
+<!-- ======================== -->
+<!--  END TOP GASTOS -->
+<!-- ======================== -->
+        
+        
+          </div>
+
 
     </div>
 <!-- ===== Main Content Start ===== -->

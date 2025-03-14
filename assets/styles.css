@@ -13,6 +13,11 @@ body {
 
 }
 
+.text-base {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
 .text-big {
   font-size: 20px !important;
   font-weight: 600 !important;
@@ -23,6 +28,13 @@ body {
   font-weight: 400;
 }
 
+
+p.down-rate {
+  color: #fe5c73;
+}
+p.up-rate {
+  color: #16dbaa;
+}
 
 .sidebar {
     transform: translateX(0%);
