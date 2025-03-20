@@ -2,20 +2,45 @@
 
 body {
   font-family: "Inter", serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
-.header-content {
-  background-image: url(../assets/images/bg-img.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
+/* Customize the entire scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
 }
 
-.text-base {
-  font-size: 18px !important;
-  font-weight: 500 !important;
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #e5ecf6;
+  border-radius: 6px;
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #718ebf;
+  border-radius: 6px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+tr th,
+tr td {
+  text-align: left;
+  padding: 1rem 0.5rem;
 }
 
 .text-big {
@@ -23,11 +48,109 @@ body {
   font-weight: 600 !important;
 }
 
+.text-base {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
 .regular-text {
   font-size: 15px;
   font-weight: 400;
 }
 
+.sub-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.button-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Side-bar Styling Start */
+#app {
+  transition: all 0.3s;
+}
+#app.toggle {
+  grid-template-columns: 100px 1fr;
+}
+
+.adjust {
+  width: 38px !important;
+  height: 38px !important;
+}
+
+.sidebar {
+  transform: translateX(0%);
+}
+
+.sidebar.open {
+  transform: translateX(0%);
+}
+
+.menu-items li a {
+  transition: all 0.3s;
+}
+
+.menu-items li {
+  position: relative;
+}
+
+.menu-items li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #25245e;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.menu-items li:hover::after {
+  opacity: 1;
+}
+.menu-items li:hover a {
+  color: #25245e;
+}
+
+.menu-items li:hover a svg path {
+  fill: #25245e;
+}
+
+.menu-items li.active a {
+  color: #25245e;
+}
+
+.menu-items li.active a svg path {
+  fill: #25245e;
+}
+
+.menu-items li.active::after {
+  opacity: 1;
+}
+
+.menu-items li a p.none {
+  display: none;
+}
+/* Side-bar Styling End */
+
+/* Header Styling Start */
+.header-content {
+  background-image: url(../assets/images/bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* Header Styling End */
+
+/* Expense Styling Start */
+.arrow.active {
+  opacity: 1;
+}
 
 p.down-rate {
   color: #fe5c73;
@@ -35,63 +158,31 @@ p.down-rate {
 p.up-rate {
   color: #16dbaa;
 }
+/* Expense Styling End */
 
 .tab.active {
   color: #718ebf;
   border-bottom: 2px solid #718ebf;
 }
 
+input[type="date"] {
+  background: url(../assets/images/calendar.svg) no-repeat 100% 50%;
+}
 
-.sidebar {
-    transform: translateX(0%);
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #app.toggle {
+    grid-template-columns: 1fr;
   }
-
-  .menu-items li a {
-    transition: all 0.3s;
-  }
-  
-   .menu-items li {
-    position: relative;
-  } 
-
-  .menu-items li::after {
-    content: "";
+  .sidebar {
+    width: 100px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: #25245e;
-    transition: all 0.3s;
-    opacity: 0;
+    background: #fff;
+    z-index: 999;
+    transform: translateX(-200%);
+    transition: all 0.5s ease-out;
   }
-
-  .arrow.active {
-    opacity: 1;
-  }
-  
-
-  .menu-items li:hover::after {
-    opacity: 1;
-  }  
-
-  .menu-items li.active::after {
-    opacity: 1;
-  }
-
-  @media screen and (max-width: 768px) {
-    #app.toggle {
-      grid-template-columns: 1fr;
-    }
-    .sidebar {
-      width: 100px;
-      position: absolute;
-      background: #fff;
-      z-index: 999;
-      transform: translateX(-200%);
-      transition: all 0.5s ease-out;
-    }
-  }
-  
+}

@@ -17,6 +17,8 @@
 <!--  END NEW EXPENS BUTTON   -->
 <!-- ======================== -->
 
+<!-- Expenses table detail -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -584,25 +586,38 @@
 <!--  END TOP GASTOS -->
 <!-- ======================== -->
 
-  <div class="p-5 sm:p-10 flex flex-col justify-between gap-8 lg:max-w-[1400px] mx-auto">    
-     <div class="flex flex-col lg:flex-row justify-between items-center w-full">
-      <div class="flex gap-5"> 
-          <button class="tab text-base text-silverGray pb-1 hover:text-softSteelBlue hover:border-b-2 hover:border-softSteelBlue active">
-            Todos los movimientos
-          </button>
-          <button class="tab text-base text-silverGray pb-1 hover:text-softSteelBlue hover:border-b-2 hover:border-softSteelBlue">
-            Ingresos
-          </button>
-          <button class="tab text-base text-silverGray pb-1 hover:text-softSteelBlue hover:border-b-2 hover:border-softSteelBlue">
-            Gastos
-          </button>
-      </div>
-      
-      <!-- <div class="flex border-2 justify-between border-[#718EBF] py-2 px-4 bg-blue-500"> -->
-        <div class="relative border border-[#718EBF] rounded-[8px] py-2 px-4 w-full sm:w-[280px] lg:w-40 text-center order-1 lg:order-2">
-        
-        <div class="flex justify-between gap-2 items-center bg-red-500 w-full" >
-          <svg
+<!-- ======================== -->
+<!--  EXPENSE TABLE           -->
+<!-- ======================== -->
+
+  <!-- ===== Expenses Table Start ===== -->
+  <div class="p-5 sm:p-10 flex flex-col justify-between gap-8 lg:max-w-[1400px] mx-auto">
+    <div
+    class="flex flex-col lg:flex-row justify-between items-center w-full"
+  >
+    <div class="tabs flex gap-5 order-2 lg:order-1 mt-5 lg:mt-0 " >
+      <button
+        class="tab text-base text-silverGray pb-1 hover:text-softSteelBlue hover:border-b-2 hover:border-softSteelBlue active"
+      >
+        Todas los movimientos
+      </button>
+      <button
+        class="tab text-base text-silverGray pb-1 hover:text-softSteelBlue hover:border-b-2 hover:border-softSteelBlue"
+      >
+        Ingresos
+      </button>
+      <button
+        class="tab text-base text-silverGray pb-1 hover:text-softSteelBlue hover:border-b-2 hover:border-softSteelBlue"
+      >
+        Gastos
+      </button>
+    </div>
+    <!-- Calendar -->
+    <div class="relative border border-[#718EBF] rounded-[8px] py-2 px-4 w-full sm:w-[280px] lg:w-40 text-center order-1 lg:order-2">
+      <span
+        class="absolute left-2 top-2 text-gray-400 pointer-events-none"
+      >
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -620,40 +635,162 @@
             fill="#A4A4A4"
           />
         </svg>
-  
-        2024      
+      </span>
+      <select
+        class="appearance-none w-full bg-transparent regular-text text-softSteelBlue focus:outline-none text-end"
+      >
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+      </select>
+    </div>
+    <!-- Ends Calendar -->
+    </div>
 
-        </div>
-
-
-
+    <div class="table-container">
+      <table
+        class="border-t-2 border-[#E5ECF6] p-3 w-full hidden lg:table"
+      >
+        <thead>
+          <tr
+            class="border-b-2 border-[#E5ECF6] text-big text-softSteelBlue"
+          >
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Porcentaje</th>
+            <th>Categoría</th>
+            <th>Fecha</th>
+            <th>Nota</th>
+            <th>Importe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="border-b-2 border-[#E5ECF6] regular-text text-charcoalGray"
+          >
+            <td>Salud</td>
+            <td>Gasto</td>
+            <td>8%</td>
+            <td>Compras</td>
+            <td>11 Mar, 12.30 AM</td>
+            <td class="text-silverGray">“Receta médica”</td>
+            <td class="text-big text-[#FE5C73]">-$50</td>
+          </tr>
+          <tr
+            class="border-b-2 border-[#E5ECF6] regular-text text-charcoalGray"
+          >
+            <td>Renta</td>
+            <td>Gasto</td>
+            <td>90%</td>
+            <td>Salud</td>
+            <td>3 Mar, 10.40 PM</td>
+            <td class="text-silverGray">-</td>
+            <td class="text-big text-[#FE5C73]">+$450</td>
+          </tr>
+          <tr
+            class="border-b-2 border-[#E5ECF6] regular-text text-charcoalGray"
+          >
+            <td>Nextory</td>
+            <td>Gasto</td>
+            <td>2%</td>
+            <td>Comunicación</td>
+            <td>3 Mar, 10.40 PM</td>
+            <td class="text-silverGray">-</td>
+            <td class="text-big text-[#FE5C73]">-$5.50</td>
+          </tr>
+          <tr
+            class="border-b-2 border-[#E5ECF6] regular-text text-charcoalGray"
+          >
+            <td>HBO</td>
+            <td>Gasto</td>
+            <td>10%</td>
+            <td>Compras</td>
+            <td>28 Feb, 03.29 PM</td>
+            <td class="text-silverGray">-</td>
+            <td class="text-big text-[#FE5C73]">-$10.50</td>
+          </tr>
+          <tr
+            class="border-b-2 border-[#E5ECF6] regular-text text-charcoalGray"
+          >
+            <td>Salud</td>
+            <td>Gasto</td>
+            <td>8%</td>
+            <td>Compras</td>
+            <td>11 Mar, 12.30 AM</td>
+            <td class="text-silverGray">“Pago Wilson”</td>
+            <td class="text-big text-[#16DBAA]">-$50</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Mobile table -->
+      <div class="p-5 bg-white block lg:hidden">
+        <ul
+          class="flex flex-col gap-3 lg:h-[210px] lg:overflow-y-auto overflow-x-hidden lg:pe-5"
+        >
+          <li
+            class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+          >
+            <div class="flex flex-col gap-1 w-[80%]">
+              <p class="text-base text-charcoalGray">Salud</p>
+              <p class="regular-text text-softSteelBlue">
+                28 Jan, 12.30 AM
+              </p>
+            </div>
+            <p class="text-base down-rate w-[20% ] text-end">-$50</p>
+          </li>
+          <li
+            class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+          >
+            <div class="flex flex-col gap-1 w-[80%]">
+              <p class="text-base text-charcoalGray">Renta</p>
+              <p class="regular-text text-softSteelBlue">
+                25 Jan, 10.40 PM
+              </p>
+            </div>
+            <p class="text-base down-rate w-[20% ] text-end">-$450</p>
+          </li>
+          <li
+            class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+          >
+            <div class="flex flex-col gap-1 w-[80%]">
+              <p class="text-base text-charcoalGray">Nextory</p>
+              <p class="regular-text text-softSteelBlue">
+                20 Jan, 10.40 PM
+              </p>
+            </div>
+            <p class="text-base down-rate w-[20% ] text-end">-$5.50</p>
+          </li>
+          <li
+            class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+          >
+            <div class="flex flex-col gap-1 w-[80%]">
+              <p class="text-base text-charcoalGray">HBO</p>
+              <p class="regular-text text-softSteelBlue">
+                15 Jan, 03.29 PM
+              </p>
+            </div>
+            <p class="text-base down-rate w-[20% ] text-end">-$10.50</p>
+          </li>
+          <li
+            class="flex justify-between items-center gap-5 w-full border-b-2 border-[#E5ECF6] pb-2"
+          >
+            <div class="flex flex-col gap-1 w-[80%]">
+              <p class="text-base text-charcoalGray">Deuda</p>
+              <p class="regular-text text-softSteelBlue">
+                14 Jan, 10.40 PM
+              </p>
+            </div>
+            <p class="text-base up-rate w-[20% ] text-end">+$840</p>
+          </li>
+        </ul>
       </div>
-     <!-- end tabs-->
+    </div>
 
-    
 
   </div>
-
-<!-- ======================== -->
-<!--  EXPENSE TABLE           -->
-<!-- ======================== -->
-
-            <div>
-              
-            </div>
-
-<!-- ======================== -->
-<!--  END EXPENSE TABLE       -->
-<!-- ======================== -->
-        
-        
-          
-
-
-    </div>
-<!-- ===== Main Content Start ===== -->
-
-    </div>
+  </div>
+</div>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
