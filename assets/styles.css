@@ -36,6 +36,12 @@ p.up-rate {
   color: #16dbaa;
 }
 
+.tab.active {
+  color: #718ebf;
+  border-bottom: 2px solid #718ebf;
+}
+
+
 .sidebar {
     transform: translateX(0%);
   }
